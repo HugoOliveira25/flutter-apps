@@ -41,6 +41,7 @@ dependencies:
   path:
   local_auth: ^0.6.1+3
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,16 +63,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/produtos/cocalata.png
-    - assets/logos/coca_logo.png
-    - assets/logos/coca_white_logo.png
-    - assets/logos/coca_black_logo.png
     - assets/logos/coca_red_logo.png
     - assets/logos/coca_zero_black_logo.png
-    - assets/logos/coca_logo.svg
-    - assets/logos/coca_logo.jpg
-    - assets/logos/coca_logo.jpeg
-    - assets/logos/monster_logo.png
     - assets/logos/monster_green_logo.png
     - assets/logos/monster_violet_logo.png
     - assets/logos/monster_mango_logo.png
@@ -79,17 +72,14 @@ flutter:
     - assets/logos/monster_absolutely_zero_logo.png
     - assets/logos/kuat_logo.png
     - assets/logos/fanta_logo.png
-    - assets/logos/delvalle_logo.jpg
     - assets/logos/delvalle_logo.png
-    - assets/logos/agua_logo.png
     - assets/logos/agua_com_gas_logo.png
     - assets/logos/burn_logo.png
-    - assets/logos/powerade_logo.png
     - assets/logos/powerade_tangerina_logo.png
     - assets/logos/powerade_limao_logo.png
     - assets/logos/schweppes_logo.png
     - assets/logos/sprite_logo.png
-    - assets/logos/sprite_logo.jpg
+    - assets/icons/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

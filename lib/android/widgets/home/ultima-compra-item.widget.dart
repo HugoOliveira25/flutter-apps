@@ -1,6 +1,5 @@
 import 'package:app_geladeira/android/controllers/compra.controller.dart';
 import 'package:app_geladeira/android/models/compra.model.dart';
-import 'package:app_geladeira/android/views/home-view.dart';
 import 'package:app_geladeira/repositorios/compra.repositorio.dart';
 import 'package:flutter/material.dart';
 import 'package:app_geladeira/extensions/moeda.extension.dart';
@@ -53,7 +52,7 @@ class _UltimaCompraItemWidgetState extends State<UltimaCompraItemWidget> {
 
   onSucess() {
     compraController.obterUltimasCompras();
-    Navigator.of(context).pushNamed("/").then((value) => setState(() {}));
+    Navigator.of(context).pushNamed("/home").then((value) => setState(() {}));
   }
 
   onError(err) {

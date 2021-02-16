@@ -1,11 +1,11 @@
 import 'package:app_geladeira/android/controllers/home.controller.dart';
 import 'package:app_geladeira/android/models/compra.model.dart';
-import 'package:app_geladeira/android/stores/app.store.dart';
+import 'package:app_geladeira/android/views/home-view.dart';
 import 'package:app_geladeira/android/widgets/produtos/produto.model.dart';
 import 'package:app_geladeira/repositorios/compra.repositorio.dart';
 import 'package:flutter/material.dart';
 import 'package:app_geladeira/extensions/moeda.extension.dart';
-import 'package:provider/provider.dart';
+
 import 'package:app_geladeira/extensions/data.extension.dart';
 
 class DialogCompra extends StatefulWidget {
@@ -48,9 +48,7 @@ class _DialogCompraState extends State<DialogCompra> {
             Text(
               widget.produto.nome,
               style: TextStyle(
-                  color: widget.produto.corSecundaria == 0xFFFFFFFF
-                      ? Color(widget.produto.corPrincipal)
-                      : Color(widget.produto.corSecundaria),
+                  color: Theme.of(context).primaryColor,
                   fontSize: 30,
                   fontWeight: FontWeight.bold),
             ),
@@ -62,9 +60,7 @@ class _DialogCompraState extends State<DialogCompra> {
                     Text(
                       widget.produto.tamanho,
                       style: TextStyle(
-                          color: widget.produto.corSecundaria == 0xFFFFFFFF
-                              ? Color(widget.produto.corPrincipal)
-                              : Color(widget.produto.corSecundaria),
+                          color: Theme.of(context).primaryColor,
                           fontSize: 30,
                           fontWeight: FontWeight.bold),
                     ),
@@ -73,9 +69,7 @@ class _DialogCompraState extends State<DialogCompra> {
                       child: Text(
                         'ml',
                         style: TextStyle(
-                            color: widget.produto.corSecundaria == 0xFFFFFFFF
-                                ? Color(widget.produto.corPrincipal)
-                                : Color(widget.produto.corSecundaria),
+                            color: Theme.of(context).primaryColor,
                             fontSize: 16,
                             fontWeight: FontWeight.bold),
                       ),
@@ -89,9 +83,7 @@ class _DialogCompraState extends State<DialogCompra> {
                       child: Text(
                         'R\$',
                         style: TextStyle(
-                            color: widget.produto.corSecundaria == 0xFFFFFFFF
-                                ? Color(widget.produto.corPrincipal)
-                                : Color(widget.produto.corSecundaria),
+                            color: Theme.of(context).primaryColor,
                             fontSize: 16,
                             fontWeight: FontWeight.bold),
                       ),
@@ -99,9 +91,7 @@ class _DialogCompraState extends State<DialogCompra> {
                     Text(
                       widget.produto.preco.formatarMoedaSemSimbolo(),
                       style: TextStyle(
-                          color: widget.produto.corSecundaria == 0xFFFFFFFF
-                              ? Color(widget.produto.corPrincipal)
-                              : Color(widget.produto.corSecundaria),
+                          color: Theme.of(context).primaryColor,
                           fontSize: 30,
                           fontWeight: FontWeight.bold),
                     ),
@@ -120,9 +110,7 @@ class _DialogCompraState extends State<DialogCompra> {
                   },
                   icon: Icon(
                     Icons.remove,
-                    color: widget.produto.corSecundaria == 0xFFFFFFFF
-                        ? Color(widget.produto.corPrincipal)
-                        : Color(widget.produto.corSecundaria),
+                    color: Theme.of(context).primaryColor,
                   ),
                   label: Text(''),
                 ),
@@ -132,9 +120,7 @@ class _DialogCompraState extends State<DialogCompra> {
                 Text(
                   '$quantidade',
                   style: TextStyle(
-                      color: widget.produto.corSecundaria == 0xFFFFFFFF
-                          ? Color(widget.produto.corPrincipal)
-                          : Color(widget.produto.corSecundaria),
+                      color: Theme.of(context).primaryColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
@@ -149,9 +135,7 @@ class _DialogCompraState extends State<DialogCompra> {
                     },
                     icon: Icon(
                       Icons.add,
-                      color: widget.produto.corSecundaria == 0xFFFFFFFF
-                          ? Color(widget.produto.corPrincipal)
-                          : Color(widget.produto.corSecundaria),
+                      color: Theme.of(context).primaryColor,
                     ),
                     label: Text(''))
               ],
@@ -167,9 +151,7 @@ class _DialogCompraState extends State<DialogCompra> {
                     child: Text(
                       'Cancelar',
                       style: TextStyle(
-                          color: widget.produto.corSecundaria == 0xFFFFFFFF
-                              ? Color(widget.produto.corPrincipal)
-                              : Color(widget.produto.corSecundaria),
+                          color: Theme.of(context).primaryColor,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
@@ -192,9 +174,10 @@ class _DialogCompraState extends State<DialogCompra> {
                       );
                       controller.inserirCompra(compra);
                       repositorio.inserir(compra);
-                      Navigator.of(context)
-                          .pushNamed("/")
-                          .then((value) => setState(() {}));
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeView()),
+                          (route) => false);
                     },
                     child: Row(
                       children: [
@@ -203,7 +186,7 @@ class _DialogCompraState extends State<DialogCompra> {
                           color: Color(widget.produto.corSecundaria),
                         ),
                         SizedBox(
-                          width: 20,
+                          width: 10,
                         ),
                         Text(
                           '${(widget.produto.preco * quantidade).formatarMoeda()}',

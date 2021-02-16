@@ -1,4 +1,4 @@
-package com.hugo.oliveira.geladeira.app
+package com.example.app_geladeira
 
 import io.flutter.embedding.android.FlutterActivity
 

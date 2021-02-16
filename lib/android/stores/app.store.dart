@@ -205,7 +205,7 @@ abstract class _AppStore with Store {
       imagem: 'assets/logos/monster_green_logo.png',
       corPrincipal: 0xFF000000,
       corSecundaria: 0xFF00ff00,
-      tamanho: '220',
+      tamanho: '473',
       favorito: true,
     ),
     Produto(
@@ -214,7 +214,7 @@ abstract class _AppStore with Store {
       imagem: 'assets/logos/monster_violet_logo.png',
       corPrincipal: 0xFF673EC0,
       corSecundaria: 0xFFB0B3BA,
-      tamanho: '220',
+      tamanho: '473',
       favorito: true,
     ),
     Produto(
@@ -223,7 +223,7 @@ abstract class _AppStore with Store {
       imagem: 'assets/logos/monster_mango_logo.png',
       corPrincipal: 0xFF00A3DD,
       corSecundaria: 0xFFFDAC07,
-      tamanho: '220',
+      tamanho: '473',
       favorito: true,
     ),
     Produto(
@@ -232,7 +232,7 @@ abstract class _AppStore with Store {
       imagem: 'assets/logos/monster_laranja_logo.png',
       corPrincipal: 0xFFF37127,
       corSecundaria: 0xFFFBB255,
-      tamanho: '220',
+      tamanho: '473',
       favorito: true,
     ),
     Produto(
@@ -241,7 +241,7 @@ abstract class _AppStore with Store {
       imagem: 'assets/logos/monster_absolutely_zero_logo.png',
       corPrincipal: 0xFF000000,
       corSecundaria: 0xFF6BD1EA,
-      tamanho: '220',
+      tamanho: '473',
       favorito: true,
     ),
     Produto(

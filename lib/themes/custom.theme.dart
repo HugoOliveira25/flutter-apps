@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 const primaryColor = Colors.black;
 const accentColor = Color(0xFFFFFFFF);
 
-ThemeData customTheme(Brightness brightness) {
+ThemeData customTheme() {
   return new ThemeData(
-    brightness: brightness,
     textTheme: new TextTheme(
       bodyText2: new TextStyle(
         fontFamily: 'Poppins',
@@ -48,7 +47,7 @@ ThemeData customTheme(Brightness brightness) {
       ),
     ),
     buttonTheme: new ButtonThemeData(
-      buttonColor: primaryColor,
+      buttonColor: accentColor,
     ),
     primaryColor: primaryColor,
     accentColor: accentColor,

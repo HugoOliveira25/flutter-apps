@@ -25,7 +25,7 @@ class _UltimasComprasWidgetState extends State<UltimasComprasWidget> {
       children: [
         Container(
           width: MediaQuery.of(context).size.width * 0.95,
-          height: MediaQuery.of(context).size.height * 0.05,
+          height: MediaQuery.of(context).size.height * 0.053,
           child: Column(
             children: [
               Row(
@@ -36,7 +36,10 @@ class _UltimasComprasWidgetState extends State<UltimasComprasWidget> {
                         bottom: BorderSide(width: 1),
                       ),
                     ),
-                    child: Text('Últimas compras'),
+                    child: Text(
+                      'Últimas compras',
+                      style: TextStyle(fontSize: 16),
+                    ),
                   ),
                 ],
               ),

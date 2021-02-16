@@ -1,11 +1,7 @@
 import 'package:app_geladeira/android/controllers/home.controller.dart';
-import 'package:app_geladeira/android/stores/app.store.dart';
-import 'package:app_geladeira/android/views/produto-detalhe.view.dart';
 import 'package:app_geladeira/android/widgets/produtos/dialog-compra.dart';
 import 'package:app_geladeira/android/widgets/produtos/produto.model.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:app_geladeira/extensions/moeda.extension.dart';
 
 class ProdutoItemWidget extends StatefulWidget {
   final Produto produto;
